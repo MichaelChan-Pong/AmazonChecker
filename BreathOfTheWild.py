@@ -1,6 +1,6 @@
 from selenium import webdriver
 from twilio.rest import Client
-import os
+import os, sys
 
 account_sid = os.environ['TWILIO_ACCOUNT_SID']
 auth_token = os.environ['TWILIO_ACCOUNT_AUTH_TOKEN']
