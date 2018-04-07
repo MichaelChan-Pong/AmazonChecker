@@ -7,7 +7,11 @@ auth_token = os.environ['TWILIO_ACCOUNT_AUTH_TOKEN']
 my_number = os.environ['MY_PHONE_NUMBER']
 twilio_number = os.environ['TWILIO_PHONE_NUMBER']
 
-browser = webdriver.Chrome()
+try:
+  browser = webdriver.Chrome()
+except ConnectionResetError:
+  sys.exit(0)
+
 browser.get('https://www.amazon.com/dp/B01MS6MO77/')
 
 client = Client(account_sid, auth_token)

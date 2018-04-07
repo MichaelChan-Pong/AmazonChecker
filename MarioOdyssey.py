@@ -19,4 +19,4 @@ for child in children:
         client.api.account.messages.create(
                 to=my_number,
                 from_=twilio_number,
-                body="Hey, you should check Breath of the Wild")
+                body="Hey, you should check Mario Odyssey")
