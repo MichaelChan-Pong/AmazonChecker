@@ -16,7 +16,10 @@ browser.get('https://www.amazon.com/dp/B01MS6MO77/')
 
 client = Client(account_sid, auth_token)
 
-elem = browser.find_element_by_id('availability')
+try:
+    elem = browser.find_element_by_id('availability')
+except:
+    sys.exit(0)
 children = elem.find_elements_by_xpath('.//*')
 for child in children:
     if('In Stock' in child.text):
